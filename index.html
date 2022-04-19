@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <div class="main">
+    <div class="todo">
+      <div class="todoAndTheme">
+        <h1>TODO</h1>
+        <img src="images/icon-sun.svg" alt="" class="light">
+        <img src="images/icon-moon.svg" alt="" class="darkimg none">
+      </div>
+      <div class="addTodo">
+        <!-- <input type="checkbox" id="done">
+        <label for="done"></label> -->
+        <span></span>
+        <input type="text" id="name" placeholder="Create a new todo..." class="dark">
+      </div>
+      <div class="checkTodo dark" >
+        <div class="eachTodo dark">
+            <button><img src="images/icon-check.svg" alt=""></button>
+            <h3>Complete javascript course</h3>
+            <img src="images/icon-cross.svg" alt="">
+        </div>
+        <div class="eachTodo dark">
+            <button><img src="images/icon-check.svg" alt=""></button>
+            <h3>Jog around park 3x</h3>
+            <img src="images/icon-cross.svg" alt="">
+        </div>
+        <div class="eachTodo dark">
+            <button><img src="images/icon-check.svg" alt=""></button>
+            <h3>10 minutes medication</h3>
+            <img src="images/icon-cross.svg" alt="">
+        </div>
+        <div class="eachTodo dark">
+            <button><img src="images/icon-check.svg" alt=""></button>
+            <h3>Read for 1 hour</h3>
+            <img src="images/icon-cross.svg" alt="">
+        </div>
+        <div class="eachTodo dark">
+            <button><img src="images/icon-check.svg" alt=""></button>
+            <h3>Pickup groceries</h3>
+            <img src="images/icon-cross.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <h4 class="info">Drag and drop to reorder list</h4>
+  </div>
+ <script src="app.js"></script>
+</body>
+</html>
