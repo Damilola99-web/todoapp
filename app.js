@@ -1,38 +1,42 @@
 // creating todo by typing in the input 
 document.querySelector('#name').addEventListener('keypress', (e)=> {
     if (e.key == 'Enter') {
-        let todo = ''
-        let todoself = ` 
-        <div class="eachTodo dark">
-            <button><img src="images/icon-check.svg" alt=""></button>
-            <h3>${e.target.value}</h3>
-            <img src="images/icon-cross.svg" alt="">
-        </div>
-        `;
-        todo = todoself;
-        document.querySelector('.checkTodo').innerHTML += todo;
-        e.target.value = '';
-
-        if (document.querySelector('img.light').classList.contains('none')) {
-            // console.log('first')
-            let each = document.querySelectorAll('.eachTodo')
-            for (const todoo of each) {
-                todoo.classList.remove('dark')
-                
+        if (e.target.value == '') {
+            alert('You entered an invalid todo')
+        } else {
+            let todo = ''
+            let todoself = ` 
+            <div class="eachTodo dark">
+                <button><img src="images/icon-check.svg" alt=""></button>
+                <h3>${e.target.value}</h3>
+                <img src="images/icon-cross.svg" alt="">
+            </div>
+            `;
+            todo = todoself;
+            document.querySelector('.checkTodo').innerHTML += todo;
+            e.target.value = '';
+    
+            if (document.querySelector('img.light').classList.contains('none')) {
+                // console.log('first')
+                let each = document.querySelectorAll('.eachTodo')
+                for (const todoo of each) {
+                    todoo.classList.remove('dark')
+                    
+                }
             }
+            setTimeout(() => {
+                for (const buttons of doneButtons) {
+                    buttons.addEventListener('click', (e)=> {
+                        e.currentTarget.classList.toggle('styling');
+                        e.currentTarget.parentElement.classList.toggle('eachTodo');
+                        e.currentTarget.parentElement.classList.toggle('doneTodo');
+                        
+                        
+            
+                    })
+                }
+            }, 1000);
         }
-        setTimeout(() => {
-            for (const buttons of doneButtons) {
-                buttons.addEventListener('click', (e)=> {
-                    e.currentTarget.classList.toggle('styling');
-                    e.currentTarget.parentElement.classList.toggle('eachTodo');
-                    e.currentTarget.parentElement.classList.toggle('doneTodo');
-                    
-                    
-        
-                })
-            }
-        }, 1000);
     }
     
     

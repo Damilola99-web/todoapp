@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-h2, h3, h4, h5, p, h6 {
+h2, h3, h4, h5, p, h6, a {
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -116,6 +116,11 @@ body {
   padding: 0px 70px;
   font-size: 18px;
   font-family: 'Josefin Sans', sans-serif;
+}
+
+.addTodo input:hover {
+  border: none;
+  outline: none;
 }
 
 .addTodo span {
@@ -340,20 +345,37 @@ h4.info {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+.belowmobile {
+  display: none;
+}
+
 @media (max-width: 700px) {
   .todo {
     width: 450px;
+  }
+  .eachTodo img[src="images/icon-cross.svg"] {
+    display: inline-block;
+  }
+  .info {
+    font-size: 12px;
   }
 }
 
 @media (max-width: 500px) {
   .todo {
-    width: 95%;
+    width: 100%;
     margin-top: 100px;
+    padding: 0px 19px;
+  }
+  .todo h3 {
+    font-size: 13px;
   }
   .main {
     width: 100vw;
     background-size: 100% 300px;
+  }
+  .todosummary h3 {
+    font-size: 12px;
   }
   .todosummary .filter {
     display: none;
@@ -363,6 +385,14 @@ h4.info {
   }
   .todoAndTheme {
     margin-bottom: 12px;
+  }
+  .belowmobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 13px;
+    width: calc(100% - 38px);
+    margin-top: 13px;
   }
 }
 /*# sourceMappingURL=style.css.map */
