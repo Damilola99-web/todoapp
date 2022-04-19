@@ -20,11 +20,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #161722;
+  height: auto;
 }
 
 .main {
   width: 100vw;
-  height: 100vh;
   background: url("images/bg-desktop-dark.jpg");
   background-color: #161722;
   background-repeat: no-repeat;
@@ -86,6 +87,7 @@ body {
 
 .todo .todoAndTheme h1 {
   letter-spacing: 20px;
+  color: white;
 }
 
 .todo .todoAndTheme img {
@@ -309,6 +311,7 @@ body {
 
 h4.info {
   margin-bottom: 30px;
+  margin-top: 30px;
   color: gray;
 }
 

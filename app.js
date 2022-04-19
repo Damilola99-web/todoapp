@@ -57,8 +57,9 @@ document.querySelector('.light').addEventListener('click', ()=> {
     // document.querySelector('img').style.backgroundColor = 'transparent'
     document.querySelector('.main').classList.add('lightbacc')
     document.querySelector('.todoAndTheme h1').style.color = 'white'
-    document.body.classList.toggle('dark')
+    // document.body.classList.toggle('dark')
     document.querySelector('.main').style.backgroundColor = 'white'
+    document.body.style.backgroundColor = 'white'
 });
 
 // theme toggler dark
@@ -66,6 +67,7 @@ document.querySelector('img.darkimg').addEventListener('click', ()=> {
     document.querySelector('img.light').classList.toggle('none')
     document.querySelector('img.darkimg').classList.toggle('none')
     document.querySelector('.main').style.backgroundColor = 'hsl(235, 21%, 11%)'
+    document.body.style.backgroundColor = 'hsl(235, 21%, 11%)'
     document.querySelector('input').classList.toggle('dark')
     document.querySelector('.todosummary').classList.toggle('dark')
     let each = document.querySelectorAll('.eachTodo')
@@ -79,7 +81,7 @@ document.querySelector('img.darkimg').addEventListener('click', ()=> {
     // document.querySelector('img').style.backgroundColor = 'transparent'
     document.querySelector('.main').classList.remove('lightbacc')
     document.querySelector('.todoAndTheme h1').style.color = 'white'
-    document.body.classList.toggle('dark')
+    // document.body.classList.toggle('dark')
 });
 
 // showing the number of completed
