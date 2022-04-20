@@ -258,11 +258,16 @@ h4.info {
             display:inline-block;
         }
     }
+    .doneTodo {
+        img[src="images/icon-cross.svg"] {
+            display:inline-block;
+        }
+    }
     .info {
         font-size: 12px;
     }
 }
-@media(max-width: 500px) {
+@media(max-width: 600px) {
     .todo {
         width: 100%;
         margin-top: 100px;
@@ -295,6 +300,12 @@ h4.info {
         border-radius: 13px;
         width: calc(100% - 38px);
         margin-top: 13px;
+        h3 {
+            cursor: pointer;
+        }
 
     }
+}
+.blue {
+    color: blue;
 }

@@ -48,6 +48,7 @@ document.querySelector('.light').addEventListener('click', ()=> {
     document.querySelector('img.darkimg').classList.toggle('none')
     document.querySelector('input').classList.toggle('dark')
     document.querySelector('.todosummary').classList.toggle('dark')
+    document.querySelector('.belowmobile').classList.toggle('dark')
     let each = document.querySelectorAll('.eachTodo')
     for (const todoo of each) {
         todoo.classList.remove('dark')
@@ -74,6 +75,7 @@ document.querySelector('img.darkimg').addEventListener('click', ()=> {
     document.body.style.backgroundColor = 'hsl(235, 21%, 11%)'
     document.querySelector('input').classList.toggle('dark')
     document.querySelector('.todosummary').classList.toggle('dark')
+    document.querySelector('.belowmobile').classList.toggle('dark')
     let each = document.querySelectorAll('.eachTodo')
     for (const todoo of each) {
         todoo.classList.add('dark')
@@ -98,7 +100,7 @@ setInterval(() => {
 
 let below = document.createElement('div')
 below.innerHTML +=  `<h3 class = 'keeptrack'></h3>`;
-below.innerHTML +=  `<div class = 'filter'><h3 class = 'all'>All</h3><h3 class = 'active'>Active</h3><h3 class = 'completed'>Completed</h3></div>`;
+below.innerHTML +=  `<div class = 'filter'><h3 class = 'all blue'>All</h3><h3 class = 'active'>Active</h3><h3 class = 'completed'>Completed</h3></div>`;
 below.innerHTML +=  `<h3 class = 'clearcomp'>Clear Completed</h3> `;
 below.classList.add('todosummary');
 below.classList.add('dark');   
@@ -141,18 +143,74 @@ document.querySelector('.clearcomp').addEventListener('click', ()=> {
         }
 })
 document.querySelector('.active').addEventListener('click', ()=> {
+    document.querySelector('.active').classList.add('blue')
+    document.querySelector('.all').classList.remove('blue')
+    document.querySelector('.completed').classList.remove('blue')
+    let addButton = document.querySelectorAll('.eachTodo')
+    for (const buttons of addButton) {
+        buttons.style.display = 'flex'
+    }
+        let deleteButton = document.querySelectorAll('.doneTodo')
+        for (const buttons of deleteButton) {
+            buttons.style.display = 'none'
+        }
+})
+document.querySelector('.activemobile').addEventListener('click', ()=> {
+    document.querySelector('.activemobile').classList.add('blue')
+    document.querySelector('.allmobile').classList.remove('blue')
+    document.querySelector('.completedmobile').classList.remove('blue')
+    let addButton = document.querySelectorAll('.eachTodo')
+    for (const buttons of addButton) {
+        buttons.style.display = 'flex'
+    }
         let deleteButton = document.querySelectorAll('.doneTodo')
         for (const buttons of deleteButton) {
             buttons.style.display = 'none'
         }
 })
 document.querySelector('.completed').addEventListener('click', ()=> {
+    document.querySelector('.active').classList.remove('blue')
+    document.querySelector('.all').classList.remove('blue')
+    document.querySelector('.completed').classList.add('blue')
         let deleteButton = document.querySelectorAll('.eachTodo')
         for (const buttons of deleteButton) {
             buttons.style.display = 'none'
         }
+        let addButton = document.querySelectorAll('.doneTodo')
+        for (const buttons of addButton) {
+            buttons.style.display = 'flex'
+        }
+})
+document.querySelector('.completedmobile').addEventListener('click', ()=> {
+    document.querySelector('.activemobile').classList.remove('blue')
+    document.querySelector('.allmobile').classList.remove('blue')
+    document.querySelector('.completedmobile').classList.add('blue')
+        let deleteButton = document.querySelectorAll('.eachTodo')
+        for (const buttons of deleteButton) {
+            buttons.style.display = 'none'
+        }
+        let addButton = document.querySelectorAll('.doneTodo')
+        for (const buttons of addButton) {
+            buttons.style.display = 'flex'
+        }
 })
 document.querySelector('.all').addEventListener('click', ()=> {
+    document.querySelector('.active').classList.remove('blue')
+    document.querySelector('.all').classList.add('blue')
+    document.querySelector('.completed').classList.remove('blue')
+        let deleteButto = document.querySelectorAll('.doneTodo')
+        for (const buttons of deleteButto) {
+            buttons.style.display = 'flex'
+        }
+        let deleteButton = document.querySelectorAll('.eachTodo')
+        for (const buttons of deleteButton) {
+            buttons.style.display = 'flex'
+        }
+})
+document.querySelector('.allmobile').addEventListener('click', ()=> {
+    document.querySelector('.activemobile').classList.remove('blue')
+    document.querySelector('.allmobile').classList.add('blue')
+    document.querySelector('.completedmobile').classList.remove('blue')
         let deleteButto = document.querySelectorAll('.doneTodo')
         for (const buttons of deleteButto) {
             buttons.style.display = 'flex'
